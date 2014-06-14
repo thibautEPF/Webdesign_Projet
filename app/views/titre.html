@@ -1,0 +1,17 @@
+  <p>
+    <div class = "panel-heading">
+      <p>N°{{valeurs.indexOf(valeur)+1+((currentPage-1)*itemsPerPage)}}<br></p>
+      <h3>{{valeur[0]}}</h3>
+    </div>
+    <div class = "panel-body">
+      <h5>De {{valeur[1]}}</h5>
+      <p>
+        Nombre de diffusions : {{valeur[8]}}<br>
+        NRJ : <progressbar animate="true" max = "100" value="(valeur[2]/valeur[8])*100" type="success"><b>{{valeur[2]}}</b></progressbar>
+        Fun Radio : <progressbar animate="true" max = "100" value="(valeur[3]/valeur[8])*100" type="info"><b>{{valeur[3]}}</b></progressbar>
+        Virgin Radio : <progressbar animate="true" max = "100" value="(valeur[4]/valeur[8])*100" type="warning"><b>{{valeur[4]}}</b></progressbar>
+        RTL 2 : <progressbar animate="true" max = "100" value="(valeur[5]/valeur[8])*100" type="danger"><b>{{valeur[5]}}</b></progressbar>
+        Oui FM : <progressbar animate="true" max = "100" value="(valeur[6]/valeur[8])*100" type="none"><b>{{valeur[6]}}</b></progressbar>
+        Radio Nova : <progressbar animate="true" max = "100" value="(valeur[7]/valeur[8])*100" type="info"><b>{{valeur[7]}}</b></progressbar>
+      </p>
+  </p>

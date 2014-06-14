@@ -1,0 +1,68 @@
+<header class = "header">
+  <h1><img src="images/Radio.png" style="width:100px;height:100px;padding:20px;" alt="Image Manquante">Radio Choose Helper<img src="images/Radio.png" style="width:100px;height:100px;padding:20px;" alt="Image Manquante"></h1>
+</header>
+
+<div class="row centre bg-bleucyan arrondis">
+  <div class="">
+    <h1>Radio :</h1>
+    <form name = "radioChoice">
+      <input type = "radio" name = "groupRadio" ng-model = "radio" value = "NRJ" ng-click = "clickListe()"> NRJ<br>
+      <input type = "radio" name = "groupRadio" ng-model = "radio" value = "Fun Radio" ng-click = "clickListe()"> Fun Radio<br>
+      <input type = "radio" name = "groupRadio" ng-model = "radio" value = "Virgin Radio" ng-click = "clickListe()"> Virgin Radio<br>
+      <input type = "radio" name = "groupRadio" ng-model = "radio" value = "RTL 2" ng-click = "clickListe()"> RTL 2<br>
+      <input type = "radio" name = "groupRadio" ng-model = "radio" value = "Oui FM" ng-click = "clickListe()"> Oui FM<br>
+      <input type = "radio" name = "groupRadio" ng-model = "radio" value = "Radio Nova" ng-click = "clickListe()"> Radio Nova<br>
+      <input type = "radio" name = "groupRadio" ng-model = "radio" value = "tousCheck" ng-click = "clickListe()"> Toutes les Radios<br>
+    </form>
+  </div>
+  <h1>Échantillons :</h1>
+  <form name = "countChoice">
+    <input type = "radio" name = "groupRadio2" ng-model = "cjson" value = 1000 ng-click = "clickEff()"> 1 000<br>
+    <input type = "radio" name = "groupRadio2" ng-model = "cjson" value = 5000 ng-click = "clickEff()"> 5 000<br>
+    <input type = "radio" name = "groupRadio2" ng-model = "cjson" value = 10000 ng-click = "clickEff()"> 10 000<br>
+    <input type = "radio" name = "groupRadio2" ng-model = "cjson" value = 50000 ng-click = "clickEff()"> 50 000<br>
+    <input type = "radio" name = "groupRadio2" ng-model = "cjson" value = 74500 ng-click = "clickEff()"> Tout le JSON (74 500)<br>
+  </form>
+  <div class="row mt50">
+    <div class = "col-xs-4 col-xs-offset-4 panel panel-danger arrondis">
+      <div class = "panel-heading">
+        <h4>Vous avez choisi :</h4>
+      </div>
+      <div class = "panel-body">
+        <p>
+          <span class = "glyphicon glyphicon-headphones"></span> {{affRadio()}}<br>
+          Echantillons JSON : {{cjson}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <a class = "btn btn-default mb50" ng-href="/#/list/?range={{radio}}&nbJsonFrames={{cjson}}" size = "30">
+    Liste
+  </a>
+</div>
+
+<footer class = "footer mt50">
+  <div class = "row">
+    <img src="/images/yeoman_grunt_bower.jpg" alt = "Image Not Found Exception">
+  </div>
+  <div class = "row noir">
+    <div class = "col-sm-4">
+      <h3>Yeoman</h3>
+      <p class="pr20 pl20">
+        Générateur de l'application.
+      </p>
+    </div>
+    <div class = "col-sm-4">
+      <h3>Grunt</h3>
+      <p class="pr20 pl20">
+        Serveur de l'application.
+      </p>
+    </div>
+    <div class = "col-sm-4">
+      <h3>Bower</h3>
+      <p class="pr20 pl20">
+        Installateur de composants et gestionnaire des packages nécessaires au fonctionnement de l'application.
+      </p>
+    </div>
+  </div>
+</footer>

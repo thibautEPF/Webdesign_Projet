@@ -1,0 +1,15 @@
+<header class = "header">
+  <h1><img src="images/Radio.png" style="width:100px;height:100px;padding:20px;" alt="Image Manquante">Radio Choose Helper<img src="images/Radio.png" style="width:100px;height:100px;padding:20px;" alt="Image Manquante"></h1>
+  <h2>Résultats de {{debut}} à {{fin}} sur {{counts.length}}</h2>
+</header>
+<div class="bg-bleucyan arrondis centre mb50">
+  <pagination boundary-links = "true" total-items = "counts.length" items-per-page = "itemsPerPage" max-size = "10" previous-text = "Précédent" next-text = "Suivant" first-text = "Page 1" last-text = "Dernière page" rotate = "false" ng-model = "currentPage" ng-change = "pageChange()"></pagination><br>
+  Chargement : <progressbar class="progress-striped active mr50 ml50" animate = "true" max="total" value="actual" type="{{barColor}}"><i>{{chargement}} %</i></progressbar><br>
+  <span class = "glyphicon glyphicon-search"></span> Recherche dans la page : <input type = "text" size = "50" ng-model = "fil"><br>
+  <span class = "glyphicon glyphicon-search ml14"></span> Recherche généralisée : <input type = "text" size = "50" ng-model = "searchVal"><br>
+  <button class = "mt50 mb50 btn btn-default" ng-click = "search()"><span class = "glyphicon glyphicon-ok"></span> Go !</button><br>
+</div>
+<div class = "row bg-gris panel panel-default" ng-repeat = "valeur in valeurs | filter:fil">
+  <title-display count = "count"></title-display>
+    
+</div>
